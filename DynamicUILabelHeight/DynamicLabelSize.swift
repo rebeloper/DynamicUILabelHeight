@@ -14,16 +14,6 @@ class DynamicLabelSize {
         
         var currentHeight: CGFloat!
         
-        let label: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-        label.numberOfLines = 0
-        label.lineBreakMode = NSLineBreakMode.byWordWrapping
-        label.font = font
-        label.text = text
-        label.sizeToFit()
-        
-        currentHeight = label.frame.height
-        label.removeFromSuperview()
-        
         return currentHeight
     }
     
